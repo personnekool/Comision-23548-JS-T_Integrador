@@ -1,0 +1,81 @@
+.btn-b{
+  border: 1px solid #ced4da;
+  border-radius: 0.3rem;
+}
+.c-w{
+  color: white;
+}
+.d-f-c{
+  color:#6c757d;
+}
+.f-s-1{
+  font-size: min(3vw,1rem);
+  width: 100%;
+}
+.f-s-2{
+  font-size: min(4vw,1.2rem);
+  width: 100%;
+}
+.g-1{
+  gap: 1rem;
+}
+.g-2{
+  gap: 2rem;
+}
+.h-center{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.p-1{
+  padding: 1rem;
+}
+.p-2{
+  padding: 2rem;
+}
+.p-l-1{
+  padding-left: 1rem;
+}
+.p-l-2{
+  padding-left: 2rem;
+}
+.p-l-3{
+  padding-left: 3rem;
+}
+.p-l-4{
+  padding-left: 4rem;
+}
+.p-r-1{
+  padding-right: 1rem;
+}
+.p-r-2{
+  padding-right: 2rem;
+}
+.p-r-3{
+  padding-right: 3rem;
+}
+.p-r-4{
+  padding-right: 4rem;
+}
+.v-center{
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.vh-center{
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+.l-v-center{
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  width: 95%;
+}
+.text-center{
+  text-align: center;
+}
