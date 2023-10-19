@@ -26,7 +26,7 @@
     quantity.value = "";
     category.value = "";
     total.value = "";
-    fname.focus();
+    lname.focus();
   }
   /**
    * [Validate name format using regex]
