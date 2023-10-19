@@ -104,8 +104,8 @@
     control += Promtuser(category);
     control += Promtuser(quantity);
     control += Promtuser(email);
-    control += Promtuser(lname);
     control += Promtuser(fname);
+    control += Promtuser(lname);
     if(control == 0){
       let totalValue = PrintTotal(category.value, quantity.value)
       total.value = `Total a pagar: \$ ${totalValue}`;
