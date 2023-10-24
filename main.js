@@ -48,14 +48,6 @@
       return array.filter((x) => { return x == arg.name }).length > 0;
     }
     /**
-     * 
-     * @param {*} arg 
-     * @returns {boolean}
-     */
-    function IsPositiveIntegerQuantity(arg) {
-      return (new RegExp(",").test(arg.value)) || (arg.value <= 0) || !(Number.isInteger(Number.parseFloat(arg.value)));
-    }
-    /**
     * [Message format error in Nombre and Apellido field]
     * [Scope: Private]
     * @param {HTMLElement} arg1 [Field to focus on error1]
@@ -76,16 +68,6 @@
       nameField.focus();
     }
     /**
-    * [Message format error in cantidad field]
-    * [Scope: Private]
-    * @param {HTMLElement} arg1 [Field to focus on error1]
-    * @param {String} arg2 [HTMLElement string name]
-    */
-    function AlertMsg3(nameField, nameText) {
-      alert(`${nameText} debe ser positiva y entera.`);
-      nameField.focus();
-    }
-    /**
     * [Calculate total ticket cost according to categroy discount]
     * [Scope: Public]
     * @param {String} arg1 [Ticket Category: Student, Trainee, Junior] 
@@ -95,6 +77,9 @@
     function PrintTotal(category, quantity) {
       let discount = 0;
       switch (category) {
+        case "":
+          discount = 0;
+          break;
         case "Estudiante":
           discount = 0.8;
           break;
@@ -124,10 +109,7 @@
         console.log(IsTextString(field));
         AlertMsg1(field, field.name);
         return 1;
-      } else if (AreFields(["Cantidad"], field) && IsPositiveIntegerQuantity(field)) {
-        AlertMsg3(field, field.name);
-        return 1;
-      } else {
+      }else {
         values[field.name] = field.value;
         return 0;
       }
@@ -157,7 +139,7 @@
   erase.addEventListener('click', EraseForm);
   resumen.addEventListener('click', () => {
     let control = 0;
-    control += ticketForm.PromtUser(category);
+    // control += ticketForm.PromtUser(category);
     control += ticketForm.PromtUser(quantity);
     control += ticketForm.PromtUser(email);
     control += ticketForm.PromtUser(fname);

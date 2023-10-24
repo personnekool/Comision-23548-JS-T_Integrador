@@ -73,9 +73,9 @@
       <div class="t-i-elem-3">
         <label class="d-f-c" for="cantidad" id="cantidad-l">Cantidad</label>
         <label class="d-f-c" for="categoria" id="categoria-l">Categoria</label>
-        <input class="btn-b" type="text" name="Cantidad" id="cantidad" placeholder="Cantidad" pattern='[1-9]+'>
+        <input class="btn-b" type="number" name="Cantidad" id="cantidad" placeholder="Cantidad" min="1" max="10" onkeypress="event.preventDefault();">
         <select class="btn-b" name="Categoria" id="categoria">
-          <option value="" selected></option>
+          <option value=" " selected></option>
           <option value="Estudiante">Estudiante</option>
           <option value="Trainee">Trainee</option>
           <option value="Junior">Junior</option>
